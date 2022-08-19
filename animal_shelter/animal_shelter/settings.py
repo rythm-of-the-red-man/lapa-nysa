@@ -144,7 +144,7 @@ REST_FRAMEWORK = {
 }
 DATABASE_URL = os.getenv("DATABASE_URL", "postgres://postgres:@localhost:5432/lapanysa")
 
-if DEBUG:
+if not DEBUG:
     DATABASES = {
         "default": dj_database_url.parse(
             DATABASE_URL, conn_max_age=600, ssl_require=os.getenv("DB_SSL", False)

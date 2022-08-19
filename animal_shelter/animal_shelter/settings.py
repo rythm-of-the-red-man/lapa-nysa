@@ -134,7 +134,7 @@ STATICFILES_DIRS = [
     f"{BASE_DIR}/frontend/build",
 ]
 
-STATIC_ROOT = str(BASE_DIR / "staticfiles")
+STATIC_ROOT = str(BASE_DIR / "static")
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 # Default primary key field type

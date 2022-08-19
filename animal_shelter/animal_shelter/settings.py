@@ -86,12 +86,12 @@ WSGI_APPLICATION = "animal_shelter.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 
 
 # Password validation
@@ -153,8 +153,8 @@ REST_FRAMEWORK = {
 }
 DATABASE_URL = os.getenv("DATABASE_URL", "postgres://postgres:@localhost:5432/lapanysa")
 
-# DATABASES = {
-#     "default": dj_database_url.parse(
-#         DATABASE_URL, conn_max_age=600, ssl_require=os.getenv("DB_SSL", False)
-#     ),
-# }
+DATABASES = {
+    "default": dj_database_url.parse(
+        DATABASE_URL, conn_max_age=600, ssl_require=os.getenv("DB_SSL", False)
+    ),
+}

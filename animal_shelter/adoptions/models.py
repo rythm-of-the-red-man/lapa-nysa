@@ -52,7 +52,7 @@ class Animal(BaseModel):
     sex = models.CharField("Płeć",choices=Sex.choices, max_length=50)
     breed = models.CharField("Rasa / W typie...", max_length=100)
     size = models.CharField("Rozmiar",choices=Size.choices, max_length=50)
-    contacts = models.ManyToManyField(Contact, verbose_name="Numery kontaktowe do adopcji")
+    # contacts = models.ManyToManyField(Contact, verbose_name="Numery kontaktowe do adopcji")
 
     @property
     def form_link(self):

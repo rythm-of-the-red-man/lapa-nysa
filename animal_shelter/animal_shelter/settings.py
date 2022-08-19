@@ -163,6 +163,7 @@ else:
 
 CORS_ALLOWED_ORIGINS = [
     "https://lapa.nysa.pl",
+    "https://www.lapa.nysa.pl",
     "http://localhost:8080",
     "http://localhost:8000",
 ]

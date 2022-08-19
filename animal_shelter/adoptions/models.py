@@ -78,15 +78,20 @@ class Photo(BaseModel):
         from io import BytesIO
         from django.core.files.uploadedfile import InMemoryUploadedFile
         from django.core.files.base import ContentFile
-        
+        from PIL.ImageOps import exif_transpose
         if self.image and self.image.name.split('.')[-1]!="webp":
             img = Image.open(
                 self.image.file
             )
-            image = img.convert('RGB')
+            image = img#.convert('RGB')
+            basewidth = 1000
+            wpercent = (basewidth/float(img.size[0]))
+            hsize = int((float(img.size[1])*float(wpercent)))
+            image = image.resize((basewidth,hsize), Image.ANTIALIAS)
             f = tempfile.TemporaryFile()
 
             buffer = BytesIO()
+            image = exif_transpose(image)
             image.save(fp=buffer, format='webp')
             image=ContentFile(buffer.getvalue())
             self.image.save(

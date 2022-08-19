@@ -8,7 +8,7 @@ const AdoptionsCarousel = () => {
   useEffect(() => {
     const getAnimals = async () => {
       const response = await fetch(
-        "http://localhost:8000/api/adoptions/?page_size=5"
+        "https://lapa.nysa.pl/api/adoptions/?page_size=5"
       );
       const data = await response.json();
 

@@ -10,7 +10,7 @@ const AnimalGallery = () => {
   useEffect(() => {
     const getAnimal = async () => {
       const response = await fetch(
-        `http://localhost:8000/api/adoptions/${animalId}`
+        `https://lapa.nysa.pl/api/adoptions/${animalId}`
       );
       const data = await response.json();
       setPhotos(data.photos);

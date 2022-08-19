@@ -12,14 +12,14 @@ const AdoptionsCarousel = () => {
   const getAnimals = async () => {
     const params = `?page=${page}&spice=${filters.spice}&size=${filters.size}&sex=${filters.sex}&age_lte=${filters.age[1]}&age_gte=${filters.age[0]}`;
     const response = await fetch(
-      `http://localhost:8000/api/adoptions/${params}`
+      `https://lapa.nysa.pl/api/adoptions/${params}`
     );
     const data = await response.json();
     setAnimals(data.results);
     setNextPage(data.next !== null);
     setPrevPage(data.previous !== null)
     setCount(data.count);
-    const responseAll = await fetch(`http://localhost:8000/api/adoptions/`);
+    const responseAll = await fetch(`https://lapa.nysa.pl/api/adoptions/`);
     const allData = await responseAll.json();
     setAllCount(allData.count);
   };

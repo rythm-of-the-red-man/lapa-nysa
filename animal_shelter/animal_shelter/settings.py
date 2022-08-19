@@ -20,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-j2-2uiha1ul^%_&0khc$0#9)j!yt)cc&6q0ue@=%ro7t9$7m8z"
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG') == "1"
 
 ALLOWED_HOSTS = []
 
@@ -137,7 +137,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesSto
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-PROD_HOST="http://localhost:8000"
+PROD_HOST="https://lapa.nysa.pl"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "resources/")
 MEDIA_URL = "/resources/"

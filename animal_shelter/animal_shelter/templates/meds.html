@@ -1,0 +1,65 @@
+{% extends "layout.html" %} {% load static %} 
+{% block opengraph %}
+<meta property="og:title" content="Leki dla Łapy" />
+<meta property="og:description" content="Lista leków potrzebnych nam do prowadzenia działalności" />
+<meta property="og:image" content="https://www.lapa.nysa.pl{% static 'public/logo.svg' %}" />
+<meta property="og:image:secure_url" content="https://www.lapa.nysa.pl{% static 'public/logo.svg' %}" />
+<meta property="og:url" content="https://www.lapa.nysa.pl/potrzeby/karma" />
+<meta property="og:site_name" content="Stowarzyszenie Łapa" />
+<meta property="og:image:type" content="image/svg" />
+<meta
+  property="og:image:alt"
+  content="lapa logo: dog shaking hand with human"
+/>
+{% endblock opengraph %}
+{% block content %}
+<h2>Najpotrzebniejsze leki</h2>
+<p>
+  Poniżej znajduje się lista najbardziej potrzebnych leków, które na bierząco są
+  zużywane w naszym schronisku.
+</p>
+<ul>
+  <li>
+    <a
+      href="https://zooart.com.pl/product-pol-18133-VETFOOD-FLORA-Balance-60-caps.html"
+      >Flora Balance
+    </a>
+  </li>
+  <li>
+    <a href="https://zoona.pl/pl_PL/products/vetfood-flexactiv-120-kapsulek"
+      >FlexActive</a
+    >
+  </li>
+  <li>
+    <a href="https://zoona.pl/pl_PL/products/hemoactiv-blister-60-caps"
+      >HemoActive</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://zooart.com.pl/product-pol-47566-VETEXPERT-VetoSkin-60-kapsulek.html"
+      >VetoSkin</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://zooart.com.pl/product-pol-19398-VETEXPERT-VetoMune-60kaps.html"
+      >VetoMune</a
+    >
+  </li>
+</ul>
+<p class="font-medium">
+  Adres do dostawy: Stowarzyszenie Łapa, ul.Grodkowska 61, 48-300 Nysa
+</p>
+
+Potrzebujemy też
+<a href="/potrzeby/karma">karmy</a>,
+<a href="/potrzeby/srodki-czystosci">środków czystości</a>
+{% endblock %} 
+{% block patronite_title %} Chcesz pomóc w inny sposób? 
+{% endblock patronite_title %}
+ {% block patronite_content %} Dostępność leków to
+jeden z wielu problemów, z jakimi mierzy się codziennie Łapa. Dzięki waszym
+wpłatom możemy rozwiązać większość z nich. Możesz zacząć pomagać już od 5 zł
+miesięcznie, to tyle co mała kawa! 
+{% endblock patronite_content %}

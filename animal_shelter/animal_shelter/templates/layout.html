@@ -1,0 +1,191 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stowarzszenie Łapa</title>
+    <meta name="robots" content="index, follow" />
+    {% block opengraph %}
+    <meta property="og:title" content="Stowarzyszenie Łapa" />
+    <meta property="og:description" content="Pomagamy poszkodowanym zwierzętom i prowadzimy adopcje zwierząt w Nysie i okolicach." />
+    <meta property="og:image" content="{% static 'public/logo.svg' %}" />
+    <meta property="og:image:secure_url" content="{% static 'public/logo.svg' %}" />
+    <meta property="og:url" content="https://www.lapa.nysa.pl" />
+    <meta property="og:site_name" content="Stowarzyszenie Łapa" />
+    <meta property="og:image:type" content="image/svg" />
+    <meta
+      property="og:image:alt"
+      content="lapa logo: dog shaking hand with human"
+    />
+    {% endblock opengraph %}
+    {% comment %} {/* Twitter */} {% endcomment %}
+    {% block twitter %}
+    <meta name="twitter:title" content="{meta.title}" />
+
+    <meta name="twitter:description" content="{meta.description}" />
+
+    <meta name="twitter:site" content="@deno_land" />
+
+    <meta name="twitter:creator" content="@deno_land" />
+    {% endblock twitter %}
+    {% comment %} {/* Canonical */} {% endcomment %}
+
+    <link rel="apple-touch-icon" sizes="180x180" href={% static 'public/apple-touch-icon.png' %} />
+    <link rel="icon" type="image/png" sizes="32x32" href={% static 'public/favicon-32x32.png' %} />
+    <link rel="icon" type="image/png" sizes="16x16" href={% static 'public/favicon-16x16.png' %} />
+    <link rel="manifest" href= "{% static 'public/site.webmanifest' %}" />
+    <link rel="mask-icon" href="{% static 'public/safari-pinned-tab.svg' %}" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8" />
+    <link href="{% static 'css/app.css' %}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+  rel="stylesheet"
+  type="text/css"
+  charset="UTF-8"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="/">
+          <img src={% static "public/logo.svg" %} alt="łapa logo: handshake with
+          dogs paw" width="50" height="50" class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="btn btn-outline-primary d-block d-lg-none me-3"
+          type="button"
+          onclick="window.location.href='/#payments'"
+        >
+          Pomóż Łapie
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarTogglerDemo01"
+        >
+           <button
+            class="btn btn-outline-primary d-none d-lg-block me-4"
+            type="button"
+          onclick="window.location.href='/#payments'"
+
+          >
+            Pomóż Łapie
+          </button>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/adopcje">
+                Adopcje
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#about"> O nas </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/lapa/kontakt"> Kontakt </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      {%block breadcrumbs%}
+      <p class="serif-font"> <a href="/">Strona główna</a></p>
+      {% endblock %}
+      {% block content %}{% endblock %}</div>
+{% block patronite %}
+<div class="container mb-5">
+  <h1 class="text-center mt-5">
+    {% block patronite_title %}
+    Nie jesteś gotów na adopcję? 
+    {% endblock patronite_title %}
+  </h1>
+  <div class="row">
+    <div class="col-6 col-md-8 pe-0">
+      <p style="text-align: justify">
+        {% block patronite_content %}
+        Wciąż możesz pomóc!
+        Serwis patronite pozwala na wspiearnie nas dowolną kwotą co miesiąc. Twoja pomoc
+        ma znaczenie, dzięki niej, możemy zagwarantować dobre warunki zwierzętom adopcyjnym.
+        {% endblock patronite_content %}
+      </p>
+    </div>
+    <div
+      class="col-6 col-md-4 pe-0 ps-0 d-block d-md-flex justify-content-center"
+    >
+      <img src={% static "public/dog_2.webp" %} />
+    </div>
+  </div>
+  <div class="row font-medium">
+    <div class="d-flex flex-column align-items-center">
+      <a href="https://patronite.pl/lapanysa">
+        <img class="payment-image" src={% static "public/patronite-SVG-01.svg"%} /></a>
+      <p>
+        Serwis patronite umożliwia comiesięczne wpłaty już od 5 zł! Zostań
+        naszym <a href="https://patronite.pl/lapanysa">patronem!</a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock patronite %}
+{% block footer %}
+<footer class="row m-0">
+  <div class="col-6 p-5">
+    <p>
+      Nyskie Pogotowie Opiekuńczo - Adopcyjne dla Zwierząt ŁAPA
+    </p>
+    <p>
+      KRS: 0000483104<br/>
+      REGON: 161560808<br/>
+      NIP: 7532433223<br/>
+    </p>
+  </div>
+  <div class="col-6 p-5">
+    <p>
+      Mail: lapa.nysa@o2.pl</br>
+      Tel: 783 587 695</br>
+      Grodkowska 61 48-303 Nysa</br>
+    </p>
+    <p>
+      Obserwuj nas w social media
+    </p>
+    <div class="d-flex justify-content-center flex-wrap">
+    <a target="blank" class="mb-3" href="https://www.facebook.com/lapanysa/"><img class="me-3" src={% static "public/facebook-svgrepo-com.svg" %}/></a>
+    <a target="blank" href="https://www.instagram.com/lapa.nysa/"><img class="me-3" src={% static "public/instagram-svgrepo-com.svg" %}/></a>
+    <a target="blank" href="https://www.tiktok.com/@lapa_nyskie_pogotowie"><img src={% static "public/tiktok.svg" %}/></a>
+    </div>
+  </div>
+</footer>
+{% endblock %}
+
+  </body>
+
+  <script src="{% static 'js/vendors.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+</html>

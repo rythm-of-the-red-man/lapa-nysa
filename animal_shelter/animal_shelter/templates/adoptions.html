@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% load static %} {% block content %}
+<div id="adoptions-seach"></div>
+{% endblock %}
+
+
+{%block breadcrumbs%}
+<p class="serif-font"><a href="/">Strona główna</a> / <a href={% url 'adoptions' %}>Adopcje</a></p>
+{% endblock %}
+
+{% block opengraph %}
+<meta property="og:title" content="Zwierzęta adopcyjne Łapy" />
+<meta property="og:description" content="Lista zwierząt dostępnych do adopcji." />
+<meta property="og:image" content="https://www.lapa.nysa.pl{% static 'public/logo.svg' %}" />
+<meta property="og:image:secure_url" content="https://www.lapa.nysa.pl{% static 'public/logo.svg' %}" />
+<meta property="og:url" content="https://www.lapa.nysa.pl/adopcje" />
+<meta property="og:site_name" content="Stowarzyszenie Łapa" />
+<meta property="og:image:type" content="image/svg" />
+<meta
+  property="og:image:alt"
+  content="lapa logo: dog shaking hand with human"
+/>
+{% endblock opengraph %}

@@ -1,0 +1,92 @@
+{% extends "layout.html" %} {% load static %} 
+{% block opengraph %}
+<meta property="og:title" content="Środki czystości dla Łapy" />
+<meta property="og:description" content="Lista środków czystości potrzebnych nam do prowadzenia działalności" />
+<meta property="og:image" content="https://www.lapa.nysa.pl{% static 'public/logo.svg' %}" />
+<meta property="og:image:secure_url" content="https://www.lapa.nysa.pl{% static 'public/logo.svg' %}" />
+<meta property="og:url" content="https://www.lapa.nysa.pl/potrzeby/srodki-czystosci" />
+<meta property="og:site_name" content="Stowarzyszenie Łapa" />
+<meta property="og:image:type" content="image/svg" />
+<meta
+  property="og:image:alt"
+  content="lapa logo: dog shaking hand with human"
+/>
+{% endblock opengraph %}
+{% block content %}
+<h2>Najpotrzebniejsze leki</h2>
+<p>
+  Poniżej znajduje się lista najbardziej potrzebnych leków, które na bierząco są
+  zużywane w naszym schronisku.
+</p>
+<ul>
+  <li>
+    <a
+      href="https://clean24.pl/product-pol-58805-Rekawiczki-nitrylowe-jednorazowe-niebieskie-100-szt-S.html"
+      >Rękawiczki jednorazowe
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://sklep.mezopuls.pl/toniki-zele-pielegnacja/832-waciki-jednorazowe-z-wlokniny-05-kg.html"
+      >Waciki jednorazowe
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://krabb.pl/pl/p/40x60-100szt-Podklady-higieniczne-chlonne-Abena/254"
+      >Podkłady higieniczne
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://clean24.pl/product-pol-58998-Sterillhand-plyn-do-higienicznej-i-chirurgicznej-dezynfekcji-rak-5000-ml.html"
+      >Płyn do dezynfekcji
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://ecoshine.sklep.pl/pl/p/FLOOR-ORANGE-10L-Plyn-z-alkoholem-do-mycia-podlog-o-zapachu-pomaranczy/321"
+      >Płyn do podłóg
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://ecoshine.sklep.pl/pl/p/DISH-CLEANER-5L-Skoncentrowany-plyn-do-recznego-mycia-naczyn/18"
+      >Płyn do naczyń
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://www.rajapack.pl/higiena-catering/worki-na-smieci-odpady/worki-na-smieci_C205010.html"
+      >Worki na śmieci
+    </a>
+  </li>
+  <li>
+    <a href="https://higienasklep.pl/artykuly-papierowe/czysciwa.html"
+      >Ręczniki papierowe
+    </a>
+  </li>
+  <li>
+    <a href="https://higienasklep.pl/artykuly-papierowe/czysciwa.html"
+      >Ręczniki papierowe
+    </a>
+  </li>
+  <li>Dowolne środki czystości.</li>
+</ul>
+
+<p class="font-medium">
+  Adres do dostawy: Stowarzyszenie Łapa, ul.Grodkowska 61, 48-300 Nysa
+</p>
+
+Potrzebujemy też
+<a href="/potrzeby/karma">karmy</a>,
+<a href="/potrzeby/leki">leków</a>
+{% endblock %} 
+{% block patronite_title %} Nie wiesz czego aktualnie brakuje? 
+{%endblock patronite_title %} 
+{% block patronite_content %}
+ Wciąż możesz pomóc!
+Serwis patronite pozwala na wspiearnie nas dowolną kwotą co miesiąc. Twoja pomoc
+ma znaczenie, dzięki niej, możemy utrzymać odpowiednie warunki sanitarne w
+schronisku.
+ {% endblock patronite_content %}

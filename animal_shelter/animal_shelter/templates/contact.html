@@ -1,0 +1,47 @@
+{% extends "layout.html" %} {% load static %}
+{% block opengraph %}
+<meta property="og:title" content="Kontakt" />
+<meta property="og:description" content="Na tej stronie znajdują się dane kontaktowe do stowarzyszenia Łapa" />
+<meta property="og:image" content="https://www.lapa.nysa.pl{% static 'public/logo.svg' %}" />
+<meta property="og:image:secure_url" content="https://www.lapa.nysa.pl{% static 'public/logo.svg' %}" />
+<meta property="og:url" content="https://www.lapa.nysa.pl/kontakt" />
+<meta property="og:site_name" content="Stowarzyszenie Łapa" />
+<meta property="og:image:type" content="image/svg" />
+<meta
+  property="og:image:alt"
+  content="lapa logo: dog shaking hand with human"
+/>
+{% endblock opengraph %}
+{%block breadcrumbs%}
+<p class="serif-font"><a href="/">Strona główna</a> / <a href={% url 'contact' %}>Kontakt</a></p>
+{% endblock %}
+{% block content %}
+<div class="row">
+<div class="col-12 col-lg-6">
+    <h1> Kontakt</h1>
+    <p>
+        Nyskie Pogotowie Opiekuńczo - Adopcyjne dla Zwierząt ŁAPA
+      </p>
+      <p>
+        KRS: 0000483104<br/>
+        REGON: 161560808<br/>
+        NIP: 7532433223<br/>
+      </p>
+      <p>
+        Mail: lapa.nysa@o2.pl</br>
+        Tel: 783 587 695</br>
+        Grodkowska 61 48-303 Nysa</br>
+      </p>
+</div>
+<div class="col-12 col-lg-6 d-flex justify-content-center">
+    <div class="mapouter"><div class="gmap_canvas"><iframe height="300px" id="gmap_canvas" src="https://maps.google.com/maps?q=Grodkowska%2061%20Nysa&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:300px;width:300px;}</style><a href="https://www.embedgooglemap.net">google maps html widget</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:300px;}</style></div></div>
+</div>
+</div>
+{% endblock %} 
+{% block patronite_title %} Jak możesz pomóc?
+{% endblock patronite_title %}
+ {% block patronite_content %} 
+ Nasze stowarzyszenie utrzymuje się głównie z datków. Dzięki Twojej regularnej pomocy możemy wypełniać swoją misję najlepiej jak tylko się da.
+ Zachęcamy do wspacia nas przez patronite, przelewów bezpośrednich lub przekazania nam 1% podatku.
+
+{% endblock patronite_content %}

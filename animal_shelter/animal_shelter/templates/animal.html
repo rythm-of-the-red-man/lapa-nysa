@@ -1,0 +1,59 @@
+{% extends 'layout.html' %} 
+{% block opengraph %}
+<meta property="og:title" content="{{animal.name}}" />
+<meta property="og:description" content="{{animal.description}}" />
+<meta property="og:image" content="https://www.lapa.nysa.pl{{animal.photos.all.0.image.url}}" />
+<meta property="og:image:secure_url" content="https://www.lapa.nysa.pl{{animal.photos.all.0.image.url}}" />
+<meta property="og:url" content="{% url 'animal-detail' animal.id %}" />
+<meta property="og:site_name" content="Stowarzyszenie Łapa" />
+<meta property="og:image:type" content="image/webp" />
+<meta
+  property="og:image:alt"
+  content="lapa logo: dog shaking hand with human"
+/>
+{% endblock opengraph %}
+{%block breadcrumbs%}
+<p class="serif-font"><a href="/">Strona główna</a> / <a href={% url 'adoptions' %}>Adopcje</a> / <a href={% url 'animal-detail' animal.id %}> {{animal.name}} </a></p>
+{% endblock %}
+
+{% block content %}
+<div>
+  
+  <h1 class="text-left mt-5 mb-3">{{animal.name}} ({{animal.age}} lat)</h1>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div id="react-gallery"></div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <h1 class="text-center mt-5">Opis</h1>
+      <div class="col-6 col-md-9 pe-0">
+        <p style="text-align: justify">{{animal.description}}</p>
+      </div>
+
+  <h1 class="text-center mt-5">Cechy</h1>
+  <div class="row">
+    <ul>
+      <li>W typie rasy {{animal.breed}}</li>
+      <li>Wiek {{animal.age}}</li>
+      <li>Płeć {{animal.get_sex_display}}</li>
+      <li>Wielkość {{animal.get_size_display}}</li>
+      <li>Waga {{animal.weight}}</li>
+      <li>Dodatkowe uwagi {{animal.additional_notes}}</li>
+    </ul>
+  </div>
+    </div>
+  </div>
+  {% comment %} <h1 class="text-center mt-5">Kontakt w sprawie adopcji</h1> {% endcomment %}
+  <div class="d-flex justify-content-center mt-5">
+    <a class="btn btn-primary btn-lg" href={{animal.form_link}}>
+      Wypełnij ankietę adopcyjną
+    </a>
+    {% comment %} <ul>
+      {% for contact in animal.contacts.all %}
+      <li>{{contact.name}}: {{contact.phone_number}}</li>
+
+      {% endfor %}
+    </ul> {% endcomment %}
+  </div>
+</div>
+{% endblock %}

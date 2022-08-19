@@ -1,0 +1,144 @@
+{% extends "layout.html" %} {% load static %} {% block content %}
+<h1 class="text-center mt-5">Nie tylko ludzie potrzebują domu</h1>
+<p>
+  Nasze stowarzyszenie pomaga zwierzętom dojść do siebie, oraz znaleźć nowego
+  właściciela. U nas możesz spotkać przyjaciela na całe życie!
+</p>
+<div class="d-flex justify-content-center">
+  <a class="btn btn-lg btn-primary mt-5" href="/adopcje" role="button"
+    >Znajdź przyjaciela</a
+  >
+</div>
+<h1 class="text-center mt-5" id="about">O stowarzyszeniu</h1>
+<div class="row align-items-center">
+  <div class="col-6 col-md-9 pe-0">
+    <p style="text-align: justify">
+      Nyska Łapa pomaga zwierzętom od 10 lat. Łapa to przede wszystkim mała grupa ludzi
+      o wielkich sercach, ale także nasi darczyńcy, ludzie adoptujący zwierzaki i prowadzący 
+      domy zastępczne dla zwierząt. Stowarzyszenie odbiera zgłoszenia 24/7, razem z policją i strażą miejską prowadzi interwencje
+      w przypadku znęcania się, leczy oraz opiekuje się rannymi zwierzętami, a take
+      koordynuje adopcje zwierzaków, które doszły do siebie. Odbieramy 10 telefonów dziennie,
+      zużywamy 100kg karmy i 5 litrów mleka na tydzień (psiaki jedzą więcej!), a znajomemu weterynarzowi załatwiliśmy drugi etat po to, 
+      żeby każde zwierzę, któremu możemy pomóc otrzymało pomoc.
+    </p>
+  </div>
+  <div
+    class="col-5 col-md-3"
+  >
+    <img src={% static "public/dog_1.webp" %} />
+  </div>
+</div>
+<div class="col">
+  <h1>Koledzy do adopcji</h1>
+  <div id="adoptions-container"></div>
+  <div class="d-flex justify-content-center">
+    <a class="btn btn-lg btn-primary mt-5" href="/adopcje" role="button"
+      >Poznaj wszystkie adopcyjne zwierzaki</a
+    >
+  </div>
+  <div class="row">
+    <h1 class="text-center mt-5">Jak możesz pomóc Łapie?</h1>
+    <p style="text-align: justify">
+      Aby zapewnić najlepszą opiekę kudłatym przyjaciołom stale potrzebna jest nam pomoc dobrych
+      ludzi. Lokatorzy naszego schroniska pochłaniają niesamowite ilości karmy (także specjalistycznej),
+      a także wymagają leków i środków czystości. <b class="font-medium">Poniżej znajdują się listy najpotrzebniejszych rzeczy,
+      wraz z linkami do produktów.</b> Jesteśmy wdzięczni za każdy zakup który pomoże nam w opiece nad zwierzętami!<br><br>
+      Adres do dostawy: <b>Stowarzyszenie Łapa, ul.Grodkowska 61, 48-300 Nysa</b>
+    </p>
+    <div class="d-flex flex-wrap justify-content-around mt-4">
+      <div class="needs-image me-5 text-center">
+        <img class="mb-2" src={% static "public/veterinarian.svg" %} />
+        <h4><a class="green" href="/potrzeby/leki">Leki dla zwierząt</a></h4>
+      </div>
+      <div class="needs-image me-5 text-center">
+        <img class="mb-2" src={% static "public/dog-food.svg" %} />
+        <h4><a class="green" href="/potrzeby/karma">Karma dla zwierząt</a></h4>
+      </div>
+      <div class="needs-image text-center">
+        <img class="mb-2" src={% static "public/pet-shampoo.svg" %} />
+        <h4><a class="green" href="/potrzeby/srodki-czystosci">Środki czystości</a></h4>
+      </div>
+    </div>
+
+
+    <div class="d-flex flex-column align-items-center mt-3 mt-lg-5">
+      <p>
+        Jeżeli masz wątpliwości, czy Twoja darowizna jest odpowiednia, prosimy o kontakt!
+      </p>
+      <a class="btn btn-lg btn-primary" href="/kontakt" role="button"
+        >Skontaktuj się z nami</a
+      >
+    </div>
+  </div>
+  <div class="col" id="payments">
+    <h1 class="text-center mt-5">Wpłaty dla Łapy</h1>
+    <div class="row align-items-center">
+      <div class="col-6 col-md-8 pe-0">
+        <p style="text-align: justify">
+          Ogrom pracy jaką wykonujemy dla naszych podopiecznych wiąże się z ogromem kosztów, na które składają się:
+          <ul>
+            <li>Rachunki weterynaryjne</li>
+            <li>Opłaty za prąd, gaz i inne media.</li>
+            <li>Karma</li>
+            <li>Środki czystości</li>
+            <li>Wiele innych pomniejszych wydatków</li>
+          </ul>
+          Udostępniamy wam różne formy dokonywania wpłat na rzecz stowarzyszenia. 
+        </p>
+        <p class="font-medium">Liczymy na Ciebie!</p>
+      </div>
+      <div
+        class="col-5 col-md-4"
+      >
+        <img class="patronite-dog" src={% static "public/dog_2.webp" %} />
+      </div>
+    </div>
+  </div>
+  <div class="row font-medium">
+    <div class="d-flex flex-column align-items-center">
+      <a href="https://patronite.pl/lapanysa">
+        <img class="payment-image" src={% static "public/patronite-SVG-01.svg"%}
+        /></a
+      >
+      <p>
+        Serwis patronite umożliwia comiesięczne wpłaty już od 5 zł! Zostań
+        naszym <a href="https://patronite.pl/lapanysa">patronem!</a>
+      </p>
+    </div>
+  </div>
+  <div class="row font-medium mt-5">
+    <div class="d-flex flex-column align-items-center">
+      <img class="payment-image" src={% static "public/OPP_logo_1_percent.svg"%}
+      />
+      <p class="mt-4">Jako firma możesz przekazać nam 1% swojego podatku</p>
+      <p><strong>KRS</strong>: 0000507234</p>
+      <p><strong>Cel szczegółowy</strong>: 3576</p>
+    </div>
+  </div>
+  <div class="row font-medium mt-5">
+    <div class="d-flex flex-column align-items-center">
+      <div class="row flex-md-nowrap">
+        <img class="payment-image" src={% static "public/paypal-seeklogo.com.svg" %} /> <img class="payment-image"
+        src={%static "public/mbank.jpeg" %} />
+      </div>
+      <div class="mt-4 mb-5">
+        <p>Przyjmujemy wpłaty bezpośrednio na konto oraz przez PayPal!</p>
+        <br />
+        <p><strong>PayPal:</strong> payp.lapa.nysa@gmail.com</p>
+        <p>
+          <strong>Odbiorca:</strong> Nyskie Pogotowie Opiekuńczo-Adopcyjnego dla
+          Zwierząt ŁAPA
+        </p>
+
+        <p><strong>Numer konta:</strong></p>
+        <p><strong>mBank:</strong> 50 1140 2017 0000 4802 1305 9827</p>
+        <p><strong>IBAN:</strong> PL50 1140 2017 0000 4802 1305 9827</p>
+
+        <p><strong>Tytuł:</strong> Darowizna dla zwierząt</p>
+
+        <p><strong>Adres:</strong> ul.Grodkowska 61, 48-300 Nysa</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block patronite %}{% endblock patronite %}

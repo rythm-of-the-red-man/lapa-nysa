@@ -1,0 +1,129 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+html {
+  font-size: 12px;
+
+  @media (min-width: 992px) {
+    font-size: 16px;
+  }
+}
+
+a {
+  &:hover {
+    color: #355834;
+  }
+
+  color: #355834;
+}
+
+:root {
+  --bs-body-font-family: "Lato", sans-serif;
+}
+
+.btn {
+  --bs-btn-border-color: #355834;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #355834;
+  --bs-btn-active-border-color: #355834;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #355834;
+  --bs-btn-disabled-border-color: #355834;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #466e44;
+  --bs-btn-hover-border-color: #355834;
+}
+
+.btn-primary {
+  --bs-btn-bg: #355834;
+  --bs-btn-color: #fff;
+  --bs-btn-focus-shadow-rgb: 53, 88, 52;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #355834;
+  --bs-btn-focus-shadow-rgb: 53, 88, 52;
+}
+
+h1,
+h4,
+.serif-font {
+  font-family: "Source Serif Pro", serif;
+}
+
+.needs-image {
+  width: 30%;
+  max-width: 150px;
+}
+
+.payment-image {
+  width: 100%;
+  max-width: 300px;
+  max-height: 100px;
+}
+
+.font-medium {
+  font-size: 16px;
+}
+
+.carousel-image {
+  height: 250px;
+
+  @media (min-width: 576px) {
+    height: 350px;
+  }
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+
+  @media (min-width: 992px) {
+    height: 500px;
+  }
+}
+
+.animal-image {
+  height: 250px;
+  max-width: 200px;
+  object-fit: cover;
+}
+
+.my-carousel-wrapper {
+  background-color: #f1f5f2;
+}
+
+footer {
+  background-color: #355834;
+  font-size: 16px;
+  color: #f1f5f2;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+#adoptions-container {
+  width: 300px;
+
+  @media (min-width: 576px) {
+    width: 350px;
+  }
+
+  @media (min-width: 768px) {
+    width: 400px;
+  }
+
+  @media (min-width: 992px) {
+    width: 500px;
+  }
+
+  margin: auto;
+}
+
+.patronite-dog {
+  max-width: 167px;
+
+  @media (min-width: 992px) {
+    max-width: 500px;
+  }
+}

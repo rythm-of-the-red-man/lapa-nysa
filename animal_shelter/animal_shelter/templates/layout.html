@@ -3,13 +3,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Stowarzszenie Łapa</title>
+    <title>
+      {% block page_title %}
+      Stowarzszenie Łapa
+      {% endblock page_title %}
+    </title>
     <meta name="robots" content="index, follow" />
     {% block opengraph %}
     <meta property="og:title" content="Stowarzyszenie Łapa" />
     <meta property="og:description" content="Pomagamy poszkodowanym zwierzętom i prowadzimy adopcje zwierząt w Nysie i okolicach." />
-    <meta property="og:image" content="{% static 'public/logo.svg' %}" />
-    <meta property="og:image:secure_url" content="{% static 'public/logo.svg' %}" />
+    <meta property="og:image" content="https://lapa.nysa.pl{% static 'public/logo.svg' %}" />
+    <meta property="og:image:secure_url" content="https://lapa.nysa.pl{% static 'public/logo.svg' %}" />
     <meta property="og:url" content="https://www.lapa.nysa.pl" />
     <meta property="og:site_name" content="Stowarzyszenie Łapa" />
     <meta property="og:image:type" content="image/svg" />

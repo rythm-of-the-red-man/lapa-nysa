@@ -4,7 +4,7 @@
 <meta property="og:description" content="{{animal.description}}" />
 <meta property="og:image" content="https://www.lapa.nysa.pl{{animal.photos.all.0.image.url}}" />
 <meta property="og:image:secure_url" content="https://www.lapa.nysa.pl{{animal.photos.all.0.image.url}}" />
-<meta property="og:url" content="{% url 'animal-detail' animal.id %}" />
+<meta property="og:url" content="https://www.lapa.nysa.pl{% url 'animal-detail' animal.id %}" />
 <meta property="og:site_name" content="Stowarzyszenie Łapa" />
 <meta property="og:image:type" content="image/webp" />
 <meta
@@ -12,6 +12,11 @@
   content="lapa logo: dog shaking hand with human"
 />
 {% endblock opengraph %}
+
+{% block page_title %}
+{{animal.name}} - Stowarzyszenie Łapa
+{% endblock page_title %}
+
 {%block breadcrumbs%}
 <p class="serif-font"><a href="/">Strona główna</a> / <a href={% url 'adoptions' %}>Adopcje</a> / <a href={% url 'animal-detail' animal.id %}> {{animal.name}} </a></p>
 {% endblock %}

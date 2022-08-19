@@ -30,7 +30,7 @@ if os.getenv('DEBUG') == '1':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["lapa.nysa.pl", '.localhost', '127.0.0.1', '[::1]', 'www.lapa.nysa.pl']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "adoptions",
+    "corsheaders",
     "rest_framework",
     'django_filters',
     "django_extensions",
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -158,3 +160,9 @@ else:
             "NAME": BASE_DIR / "db.sqlite3",
         }
     }
+
+CORS_ALLOWED_ORIGINS = [
+    "https://lapa.nysa.pl",
+    "http://localhost:8080",
+    "http://localhost:8000",
+]

@@ -1,5 +1,5 @@
 from rest_framework import viewsets, mixins, serializers
-from adoptions.models import Animal, Photo, Contact
+from adoptions.models import Animal, Photo
 
 from django_filters import FilterSet
 import django_filters
@@ -12,14 +12,8 @@ class PhotoSerializer(serializers.ModelSerializer):
         model=Photo
         fields="__all__"
 
-class ContactSerializer(serializers.ModelSerializer):
-    class Meta:
-        model=Contact
-        fields="__all__"
-
 class AnimalSerializer(serializers.ModelSerializer):
     photos = PhotoSerializer(many=True)
-    contacts = ContactSerializer(many=True)
     class Meta:
         model=Animal
         fields="__all__"

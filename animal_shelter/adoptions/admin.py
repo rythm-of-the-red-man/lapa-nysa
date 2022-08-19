@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from adoptions.models import Animal
-from adoptions.models import Contact, Photo
+from adoptions.models import Photo
 from django.utils.safestring import mark_safe
 
 class PhotoTabularInline(admin.TabularInline):
@@ -28,6 +28,3 @@ class AminalAdmin(admin.ModelAdmin):
     list_filter=['spice','size']
     inlines = [PhotoTabularInline]
 
-@admin.register(Contact)
-class ContactAdmin(admin.ModelAdmin):
-    extra=1

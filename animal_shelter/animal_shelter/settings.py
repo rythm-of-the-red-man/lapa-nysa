@@ -30,8 +30,8 @@ if os.getenv('DEBUG') == '1':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ["lapa.nysa.pl", '.localhost', '127.0.0.1', '[::1]', 'www.lapa.nysa.pl']
-
+# ALLOWED_HOSTS = ["lapa.nysa.pl", '.localhost', '127.0.0.1', '[::1]', 'www.lapa.nysa.pl']
+ALLOWED_HOSTS=['*']
 
 # Application definition
 

@@ -31,18 +31,18 @@
     </div>
     <div class="col-12 col-lg-6">
       <h1 class="text-center mt-5">Opis</h1>
-      <div class="col-6 col-md-9 pe-0">
+      <div class="col-12 col-md-9 ps-2 pe-2">
         <p style="text-align: justify">{{animal.description}}</p>
       </div>
 
   <h1 class="text-center mt-5">Cechy</h1>
-  <div class="row">
+  <div class="row ps-4 pe-4">
     <ul>
       <li>W typie rasy {{animal.breed}}</li>
-      <li>Wiek {{animal.age}}</li>
+      <li>Wiek {{animal.age}} lat</li>
       <li>Płeć {{animal.get_sex_display}}</li>
       <li>Wielkość {{animal.get_size_display}}</li>
-      <li>Waga {{animal.weight}}</li>
+      <li>Waga {{animal.weight}} kg</li>
       <li>Dodatkowe uwagi {{animal.additional_notes}}</li>
     </ul>
   </div>

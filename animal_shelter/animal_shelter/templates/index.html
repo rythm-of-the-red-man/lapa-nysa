@@ -1,9 +1,9 @@
 {% extends "layout.html" %} {% load static %} {% block content %}
 <h1 class="text-center mt-5">Nie tylko ludzie potrzebują domu</h1>
-<p>
+<h5 class="text-center">
   Nasze stowarzyszenie pomaga zwierzętom dojść do siebie, oraz znaleźć nowego
   właściciela. U nas możesz spotkać przyjaciela na całe życie!
-</p>
+</h5>
 <div class="d-flex justify-content-center">
   <a class="btn btn-lg btn-primary mt-5" href="/adopcje" role="button"
     >Znajdź przyjaciela</a
@@ -11,21 +11,21 @@
 </div>
 <h1 class="text-center mt-5" id="about">O stowarzyszeniu</h1>
 <div class="row align-items-center">
-  <div class="col-6 col-md-9 pe-0">
+  <div class="col-6 col-md-8 pe-0">
     <p style="text-align: justify">
       Nyska Łapa pomaga zwierzętom od 10 lat. Łapa to przede wszystkim mała grupa ludzi
       o wielkich sercach, ale także nasi darczyńcy, ludzie adoptujący zwierzaki i prowadzący 
       domy zastępczne dla zwierząt. Stowarzyszenie odbiera zgłoszenia 24/7, razem z policją i strażą miejską prowadzi interwencje
-      w przypadku znęcania się, leczy oraz opiekuje się rannymi zwierzętami, a take
+      w przypadku znęcania się, leczy oraz opiekuje się rannymi zwierzętami, a tażke
       koordynuje adopcje zwierzaków, które doszły do siebie. Odbieramy 10 telefonów dziennie,
       zużywamy 100kg karmy i 5 litrów mleka na tydzień (psiaki jedzą więcej!), a znajomemu weterynarzowi załatwiliśmy drugi etat po to, 
       żeby każde zwierzę, któremu możemy pomóc otrzymało pomoc.
     </p>
   </div>
   <div
-    class="col-5 col-md-3"
+    class="col-5 col-md-3 offset-md-1"
   >
-    <img src={% static "public/dog_1.webp" %} />
+    <img style="width:100%" src={% static "public/dog_1_new.webp" %} />
   </div>
 </div>
 <div class="col">
@@ -65,7 +65,7 @@
       <p>
         Jeżeli masz wątpliwości, czy Twoja darowizna jest odpowiednia, prosimy o kontakt!
       </p>
-      <a class="btn btn-lg btn-primary" href="/kontakt" role="button"
+      <a class="btn btn-lg btn-primary" href="/lapa/kontakt" role="button"
         >Skontaktuj się z nami</a
       >
     </div>
@@ -78,7 +78,7 @@
           Ogrom pracy jaką wykonujemy dla naszych podopiecznych wiąże się z ogromem kosztów, na które składają się:
           <ul>
             <li>Rachunki weterynaryjne</li>
-            <li>Opłaty za prąd, gaz i inne media.</li>
+            <li>Opłaty za prąd, gaz i inne media</li>
             <li>Karma</li>
             <li>Środki czystości</li>
             <li>Wiele innych pomniejszych wydatków</li>

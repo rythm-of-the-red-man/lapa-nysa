@@ -43,7 +43,7 @@ const AnimalGallery = () => {
           </div>
           <div
             className="d-flex"
-            style={{ overflow: "auto", maxWidth: "400px" }}
+            style={{ overflow: "auto", maxWidth: "100%" }}
           >
             {photos.map((photo, index) => (
               <img

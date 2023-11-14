@@ -67,6 +67,7 @@ h4,
 
 .carousel-image {
   height: 250px;
+  max-width: 100%;
 
   @media (min-width: 576px) {
     height: 350px;
